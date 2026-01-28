@@ -7,6 +7,11 @@ Include:
 - Popolazione dati realistici
 - Query di esempio: JOIN, GROUP BY, COUNT, filtri su date, TOP N, ecc.
 
+## Ambiente di sviluppo
+
+Il database e le query sono stati creati e testati utilizzando **phpMyAdmin** in **XAMPP**, su server locale.  
+Questo ambiente permette di gestire MySQL facilmente e di verificare tutte le query SQL incluse.
+
 ## Schema database
 
 - `studenti` → informazioni sugli studenti
