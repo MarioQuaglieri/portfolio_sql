@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS docenti(
 );
 
 CREATE TABLE IF NOT EXISTS corsi(
-    id_corso INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT REFERENCES studenti_corsi(id_corso),
+    id_corso INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nome_corso VARCHAR(20) NOT NULL UNIQUE,
     data_inizio DATE NOT NULL,
     data_fine DATE NOT NULL,
@@ -32,8 +32,8 @@ CREATE TABLE IF NOT EXISTS corsi(
 
 CREATE TABLE IF NOT EXISTS studenti_corsi(
     id_rapporto INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    id_studente INT NOT NULL UNIQUE,
-    id_corso INT NOT NULL UNIQUE,
+    id_studente INT NOT NULL,
+    id_corso INT NOT NULL,
     data_iscrizione DATE NOT NULL DEFAULT CURRENT_DATE,
     CONSTRAINT fk_sc_studenti
     	FOREIGN KEY (id_studente)
